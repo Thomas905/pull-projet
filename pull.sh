@@ -9,6 +9,9 @@ git pull
 # Compile WebPack
 yarn encore dev
 
+# Doctrine migration
+bin/console d:m:m
+
 # Clear cache
 bin/console cache:clear
 
