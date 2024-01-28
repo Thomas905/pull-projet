@@ -12,6 +12,8 @@ db_name=$(echo $database_url | sed -E 's/.*\/(.*)\?.*/\1/')
 # Backup SQL
 mysqldump -u "$db_user" -p"$db_password" -h "$db_host" "$db_name" > backup.sql
 
+wait
+
 # Restore git
 git restore .
 
